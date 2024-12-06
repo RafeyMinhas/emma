@@ -26,7 +26,6 @@ class PageViewScreen extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            // PageView at the bottom
             Positioned.fill(
               child: PageView(
                 controller: pageController,
@@ -40,7 +39,7 @@ class PageViewScreen extends StatelessWidget {
 
             // Smooth Page Indicator at the top
             Positioned(
-              top: 270.h,
+              top: 265.h,
               left: 0,
               right: 0,
               child: Center(
@@ -57,7 +56,7 @@ class PageViewScreen extends StatelessWidget {
 
             // Activity Text "Activity" in yellow, positioned left below the smooth indicator
             Positioned(
-              top: 280.h,
+              top: 275.h,
               left: 25.w,
               child: Text(
                 'Activity',
@@ -71,7 +70,7 @@ class PageViewScreen extends StatelessWidget {
 
             // ".........." Text in black, centered below the "Activity" text
             Positioned(
-              top: 297.h,
+              top: 290.h,
               left: 0,
               right: 0,
               child: Center(
@@ -87,7 +86,7 @@ class PageViewScreen extends StatelessWidget {
 
             // Activity Cards fixed at the bottom and scrollable
             Positioned(
-              top: 330.h,
+              top: 325.h,
               left: 0,
               right: 0,
               bottom: 0, // Occupy the remaining space at the bottom
@@ -108,7 +107,7 @@ class PageViewScreen extends StatelessWidget {
                       const ActivityCard(
                         icon: Icons.bed,
                         title: 'Sleep',
-                        progress: 0.3,
+                        progress: 0.5,
                         status: 'Need Improvement',
                         iconColor: AppColors.green,
                         progressColor: AppColors.green,
@@ -117,7 +116,7 @@ class PageViewScreen extends StatelessWidget {
                       const ActivityCard(
                         icon: Icons.personal_injury,
                         title: 'Doctor\'s Order',
-                        progress: 0.5,
+                        progress: 0.8,
                         status: 'On Track',
                         iconColor: AppColors.blue,
                         progressColor: AppColors.blue,
@@ -138,43 +137,6 @@ class PageViewScreen extends StatelessWidget {
             ),
 
             // Profile Image and Welcome Text
-            Positioned(
-              // Positioning the profile image
-              right: 15.w, // Align it to the right
-              child: GestureDetector(
-                onTap: () {
-                  // Open Drawer when profile picture is tapped
-                  _scaffoldKey.currentState?.openDrawer();
-                },
-                child: Column(
-                  crossAxisAlignment:
-                      CrossAxisAlignment.end, // Align content to the right
-                  children: [
-                    CircleAvatar(
-                      radius: 18.r,
-                      backgroundImage:
-                          const AssetImage("Assets/Profile_Pic.png"),
-                      backgroundColor: Colors.grey[300],
-                    ),
-                    SizedBox(height: 4.h),
-                    Text(
-                      "Welcome,",
-                      style: TextStyle(
-                        color: const Color(0xFFFFC107),
-                        fontSize: 10.sp,
-                      ),
-                    ),
-                    Text(
-                      "Claudia",
-                      style: TextStyle(
-                        color: const Color(0xFFFFC107),
-                        fontSize: 10.sp,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
           ],
         ),
       ),

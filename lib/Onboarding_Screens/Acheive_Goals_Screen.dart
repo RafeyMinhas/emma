@@ -22,7 +22,7 @@ class AcheiveGoals extends StatelessWidget {
             ),
           ),
           Container(
-            height: 215.h,
+            height: 210.h,
             width: 215.w,
             decoration: const BoxDecoration(
               shape: BoxShape.circle,

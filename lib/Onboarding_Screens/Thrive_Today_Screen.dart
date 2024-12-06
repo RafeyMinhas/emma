@@ -26,7 +26,7 @@ class ThriveToday extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 215.h,
+                height: 210.h,
                 width: 215.w,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
@@ -34,7 +34,7 @@ class ThriveToday extends StatelessWidget {
                 ),
                 child: Center(
                   child: Image.asset(
-                    "Assets/Hi_Emma_Logo.png", // Replace with your image path
+                    "Assets/Hi_Emma.png", // Replace with your image path
                     height: 200.h,
                     width: 180.w,
                   ),

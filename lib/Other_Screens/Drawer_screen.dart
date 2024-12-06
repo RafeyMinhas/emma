@@ -1,3 +1,4 @@
+import 'package:emma_ui_project/Onboarding_Screens/Page_View_Screen.dart';
 import 'package:emma_ui_project/Utils/App_Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -44,9 +45,17 @@ class CustomDrawer extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         // SizedBox(height: 0.h),
-                        IconButton(
-                          icon: Icon(Icons.arrow_back, size: 24.sp),
-                          onPressed: () {},
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PageViewScreen()));
+                          },
+                          child: IconButton(
+                            icon: Icon(Icons.arrow_back, size: 24.sp),
+                            onPressed: () {},
+                          ),
                         ),
                         Row(
                           children: [
@@ -144,7 +153,7 @@ class CustomDrawer extends StatelessWidget {
         leading: Icon(icon, size: 20.sp),
         title: Text(
           title,
-          style: TextStyle(fontSize: 14.sp),
+          style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.bold),
         ),
         onTap: () {},
         visualDensity: VisualDensity(vertical: -4), // Minimum allowed density

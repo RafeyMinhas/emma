@@ -38,11 +38,18 @@ dependencies:
   curved_navigation_bar: ^1.0.6
   flutter_screenutil: ^5.9.3
   smooth_page_indicator: ^1.2.0+3
+  table_calendar: ^3.1.2
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.14.2"
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "Assets/Hi_Emma_Logo.png"
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -67,9 +74,15 @@ flutter:
     - Assets/EH_Woman_Jogging.png
     - Assets/EH_Phone_and_Fruit.png
     - Assets/Profile_Pic.png
-    - Assets/Hi_Emma_Logo.png
+    - Assets/Hi_Emma.png
     - Assets/Tree.png
     - Assets/Activity_Tracker.png
+    - Assets/Healthy_Item.jpeg
+    - Assets/Mindfullness.jpg
+    - Assets/Sync_App.jpg
+    - Assets/Video_Pic.png
+    
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

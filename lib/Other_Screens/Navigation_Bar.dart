@@ -31,22 +31,28 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
+      // Custom Drawer
       drawer: const CustomDrawer(),
 
-      // Change background color based on selected screen
+      // Disable swipe gestures for both the left and right drawer
+      drawerEnableOpenDragGesture: false,
+      endDrawerEnableOpenDragGesture: false,
+
+      // Change background color based on the current screen
       backgroundColor: _currentIndex == 1 ? Colors.white : AppColors.purple,
 
       body: Stack(
         children: [
           _screens[_currentIndex],
 
-          // Show Profile Section only on Home Screen (_currentIndex == 0)
+          // Profile section only shown on Home Screen (_currentIndex == 0)
           if (_currentIndex == 0)
             Positioned(
               top: 25.h,
               right: 15.w,
               child: GestureDetector(
                 onTap: () {
+                  // Open the drawer when profile section is tapped
                   _scaffoldKey.currentState?.openDrawer();
                 },
                 child: Column(

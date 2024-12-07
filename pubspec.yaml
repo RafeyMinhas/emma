@@ -39,17 +39,21 @@ dependencies:
   flutter_screenutil: ^5.9.3
   smooth_page_indicator: ^1.2.0+3
   table_calendar: ^3.1.2
-  
+  flutter_launcher_icons: ^0.13.1
+  carousel_slider: ^5.0.0
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_launcher_icons: "^0.14.2"
 
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
   image_path: "Assets/Hi_Emma_Logo.png"
+  remove_alpha_ios: true
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+ 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -81,6 +85,8 @@ flutter:
     - Assets/Mindfullness.jpg
     - Assets/Sync_App.jpg
     - Assets/Video_Pic.png
+    - Assets/Activity3.jpg
+    - Assets/Activity4.jpg
     
 
 

@@ -49,26 +49,38 @@ class AskEmmaScreen extends StatelessWidget {
                     Expanded(
                       child: Container(
                         padding: EdgeInsets.symmetric(
-                            horizontal: 10.w, vertical: 8.h),
+                          horizontal: 10.w,
+                        ),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.all(Radius.circular(30)),
                         ),
                         child: Row(
                           children: [
-                            Icon(Icons.search, color: Colors.grey, size: 20.sp),
+                            Icon(Icons.search,
+                                color: Colors.grey,
+                                size: 20.sp), // Icon size remains the same
                             SizedBox(width: 8.w),
                             Expanded(
-                              child: Text(
-                                "Ask Emma",
+                              child: TextField(
                                 style: TextStyle(
-                                  fontSize: 16.sp,
+                                  fontSize: 16.sp, // Font size remains the same
                                   color: Colors.grey,
+                                ),
+                                decoration: InputDecoration(
+                                  hintText: "Ask Emma",
+                                  hintStyle: TextStyle(
+                                    fontSize: 16
+                                        .sp, // Hint text size remains the same
+                                    color: Colors.grey,
+                                  ),
+                                  border: InputBorder.none, // Removes underline
                                 ),
                               ),
                             ),
                             Icon(Icons.message,
-                                color: AppColors.purple, size: 20.sp),
+                                color: AppColors.purple,
+                                size: 20.sp), // Icon size remains the same
                             SizedBox(width: 10.w),
                             Icon(Icons.phone,
                                 color: AppColors.purple, size: 20.sp),

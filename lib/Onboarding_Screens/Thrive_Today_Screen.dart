@@ -44,7 +44,7 @@ class ThriveToday extends StatelessWidget {
           ),
         ),
       ),
-      endDrawer: const CustomDrawer(), // Attach the CustomDrawer
+      // Attach the CustomDrawer
     );
   }
 }

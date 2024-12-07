@@ -10,19 +10,23 @@ import 'package:emma_ui_project/Onboarding_Screens/Thrive_Today_Screen.dart';
 import 'package:emma_ui_project/Other_Screens/Drawer_screen.dart';
 import 'package:emma_ui_project/Utils/App_Colors.dart';
 
-class PageViewScreen extends StatelessWidget {
+class PageViewScreen extends StatefulWidget {
   PageViewScreen({super.key});
 
-  final PageController pageController = PageController();
-  final GlobalKey<ScaffoldState> _scaffoldKey =
-      GlobalKey<ScaffoldState>(); // Key for Scaffold
+  @override
+  State<PageViewScreen> createState() => _PageViewScreenState();
+}
 
+class _PageViewScreenState extends State<PageViewScreen> {
+  final PageController pageController = PageController();
+
+  // Key for Scaffold
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey, // Set the scaffold key to control the drawer
+      // Set the scaffold key to control the drawer
       backgroundColor: AppColors.purple,
-      drawer: const CustomDrawer(), // Your Drawer widget here
+
       body: SafeArea(
         child: Stack(
           children: [

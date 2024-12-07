@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:emma_ui_project/Custom_Widgets/Activity_Card.dart';
 import 'package:emma_ui_project/Utils/App_Colors.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class ActivityScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.topCenter,
                   child: Text(
-                    "About You",
+                    "Activity ",
                     style: TextStyle(
                       color: const Color(0xFFFFC107),
                       fontSize: 35.sp,
@@ -28,9 +29,7 @@ class ActivityScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 5.h,
-                ),
+                SizedBox(height: 5.h),
                 Column(children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -48,7 +47,6 @@ class ActivityScreen extends StatelessWidget {
                           color: const Color(0xFFFFD700),
                         ),
                       ),
-                      SizedBox(height: 10.h),
                       Column(
                         children: [
                           CircleAvatar(
@@ -71,7 +69,6 @@ class ActivityScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 0.h),
                       Padding(
                         padding: EdgeInsets.only(left: 50.w),
                         child: Text(
@@ -89,7 +86,6 @@ class ActivityScreen extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(right: 160.w),
                     child: Container(
-                      // padding: EdgeInsets.symmetric(horizontal: 0.w, vertical: 5.h),
                       decoration: BoxDecoration(
                         color: const Color(0xFFBEC3B5),
                         borderRadius: BorderRadius.circular(5.r),
@@ -109,11 +105,27 @@ class ActivityScreen extends StatelessWidget {
             ),
           ),
 
-          //  SizedBox(height: 0.h), // Reduced gap before tracker image
-          Image.asset(
-            'Assets/Activity_Tracker.png',
-            fit: BoxFit.fitWidth,
+          // Image Slider
+          CarouselSlider(
+            items: [
+              Image.asset('Assets/Activity_Tracker.png',
+                  fit: BoxFit.cover, width: double.infinity),
+              Image.asset('Assets/Activity3.jpg',
+                  fit: BoxFit.cover, width: double.infinity),
+              Image.asset('Assets/Activity4.jpg',
+                  fit: BoxFit.cover, width: double.infinity),
+            ],
+            options: CarouselOptions(
+              height: 200.h, // Adjust height to your needs
+              viewportFraction: 1.0, // Ensure no padding on the sides
+              autoPlay: true,
+              autoPlayInterval: Duration(seconds: 3),
+              enableInfiniteScroll:
+                  true, // User can cycle through images infinitely
+              enlargeCenterPage: false, // Prevent zoom-in effect
+            ),
           ),
+
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),

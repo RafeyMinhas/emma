@@ -1,4 +1,3 @@
-import 'package:emma_ui_project/Onboarding_Screens/Page_View_Screen.dart';
 import 'package:emma_ui_project/Utils/App_Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -12,8 +11,6 @@ class CustomDrawer extends StatelessWidget {
     return Drawer(
       child: LayoutBuilder(
         builder: (context, constraints) {
-          double screenHeight = MediaQuery.of(context).size.height;
-
           // Get bottom navigation height
           double bottomNavHeight = kBottomNavigationBarHeight;
 
@@ -44,17 +41,18 @@ class CustomDrawer extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // SizedBox(height: 0.h),
+                        // Add back button functionality here
                         InkWell(
                           onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => PageViewScreen()));
+                            Navigator.pop(
+                                context); // This will take you back to the previous screen
                           },
                           child: IconButton(
                             icon: Icon(Icons.arrow_back, size: 24.sp),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pop(
+                                  context); // This will also take you back to the previous screen
+                            },
                           ),
                         ),
                         Row(
